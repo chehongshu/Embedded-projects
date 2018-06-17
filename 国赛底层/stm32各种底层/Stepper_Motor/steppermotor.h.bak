@@ -1,0 +1,25 @@
+#ifndef _JINBUDIANJI_H_
+#define _JINBUDIANJI_H_
+
+#define ENA_Left_H     GPIO_SetBits(GPIOA,GPIO_Pin_4)
+#define ENA_Left_L     GPIO_ResetBits(GPIOA,GPIO_Pin_4)
+
+#define ENA_Right_H    GPIO_SetBits(GPIOA,GPIO_Pin_6)
+#define ENA_Right_L    GPIO_ResetBits(GPIOA,GPIO_Pin_6)
+
+#define DIR_Left_H     GPIO_SetBits(GPIOA,GPIO_Pin_5);
+#define DIR_Left_L     GPIO_ResetBits(GPIOA,GPIO_Pin_5);
+
+#define DIR_Right_H    GPIO_SetBits(GPIOA,GPIO_Pin_7);
+#define DIR_Right_L    GPIO_ResetBits(GPIOA,GPIO_Pin_7);
+
+
+
+void steppermotor_init();
+
+void stop_motor();
+
+void start_motor();
+
+
+#endif

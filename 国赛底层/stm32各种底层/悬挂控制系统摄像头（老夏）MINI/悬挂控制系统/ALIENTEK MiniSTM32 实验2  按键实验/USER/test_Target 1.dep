@@ -1,0 +1,118 @@
+Dependencies for Project 'test', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_stm32f10x_hd.s)(0x532C056E)(--cpu Cortex-M3 -g --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include--list ..\obj\startup_stm32f10x_hd.lst --xref -o ..\obj\startup_stm32f10x_hd.o --depend ..\obj\startup_stm32f10x_hd.d)
+F (.\test.c)(0x578630B5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\test.o --omf_browse ..\obj\test.crf --depend ..\obj\test.d)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\usart\usart.h)(0x5323CAD8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
+I (..\SYSTEM\delay\delay.h)(0x50BF2544)
+I (..\HARDWARE\STEPER\steper.h)(0x578453F8)
+I (..\HARDWARE\KEY\key.h)(0x5317E8E8)
+I (..\HARDWARE\MOVEXY\movexy.h)(0x57849478)
+I (..\HARDWARE\OV7670\ov7670.h)(0x56482E36)
+I (..\HARDWARE\OV7670\sccb.h)(0x50909F38)
+I (..\HARDWARE\EXTI\exti.h)(0x5666B4E0)
+I (..\HARDWARE\LCD\lcd.h)(0x577CED21)
+I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
+F (..\SYSTEM\delay\delay.c)(0x5290AD54)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\delay.o --omf_browse ..\obj\delay.crf --depend ..\obj\delay.d)
+I (..\SYSTEM\delay\delay.h)(0x50BF2544)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+F (..\SYSTEM\sys\sys.c)(0x52BC4396)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\sys.o --omf_browse ..\obj\sys.crf --depend ..\obj\sys.d)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+F (..\SYSTEM\usart\usart.c)(0x532C1352)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
+I (..\SYSTEM\usart\usart.h)(0x5323CAD8)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
+F (..\HARDWARE\LED\led.c)(0x53171840)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\led.o --omf_browse ..\obj\led.crf --depend ..\obj\led.d)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (..\HARDWARE\LED\led.h)(0x53171840)
+F (..\HARDWARE\KEY\key.c)(0x53182266)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
+I (..\HARDWARE\KEY\key.h)(0x5317E8E8)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\delay\delay.h)(0x50BF2544)
+F (..\HARDWARE\STEPER\steper.c)(0x578457CE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\steper.o --omf_browse ..\obj\steper.crf --depend ..\obj\steper.d)
+I (..\HARDWARE\STEPER\steper.h)(0x578453F8)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\delay\delay.h)(0x50BF2544)
+F (..\HARDWARE\MOVEXY\movexy.c)(0x5785DDC2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\movexy.o --omf_browse ..\obj\movexy.crf --depend ..\obj\movexy.d)
+I (..\HARDWARE\STEPER\steper.h)(0x578453F8)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (..\HARDWARE\MOVEXY\movexy.h)(0x57849478)
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x52FDD27E)
+I (..\SYSTEM\usart\usart.h)(0x5323CAD8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
+F (..\HARDWARE\OV7670\ov7670.c)(0x5785E3CC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\ov7670.o --omf_browse ..\obj\ov7670.crf --depend ..\obj\ov7670.d)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (..\HARDWARE\OV7670\ov7670.h)(0x56482E36)
+I (..\HARDWARE\OV7670\sccb.h)(0x50909F38)
+I (..\HARDWARE\OV7670\ov7670cfg.h)(0x5785E3CC)
+I (..\SYSTEM\delay\delay.h)(0x50BF2544)
+I (..\SYSTEM\usart\usart.h)(0x5323CAD8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
+F (..\HARDWARE\OV7670\sccb.c)(0x50909F6E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\sccb.o --omf_browse ..\obj\sccb.crf --depend ..\obj\sccb.d)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (..\HARDWARE\OV7670\sccb.h)(0x50909F38)
+I (..\SYSTEM\delay\delay.h)(0x50BF2544)
+F (..\HARDWARE\EXTI\exti.c)(0x57862AAC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\exti.o --omf_browse ..\obj\exti.crf --depend ..\obj\exti.d)
+I (..\HARDWARE\EXTI\exti.h)(0x5666B4E0)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\delay\delay.h)(0x50BF2544)
+I (..\SYSTEM\usart\usart.h)(0x5323CAD8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
+I (..\HARDWARE\OV7670\ov7670.h)(0x56482E36)
+I (..\HARDWARE\OV7670\sccb.h)(0x50909F38)
+F (..\HARDWARE\LCD\ILI93xx.c)(0x55CAF4D6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\STEPER -I..\HARDWARE\MOVEXY -I..\HARDWARE\EXTI -I..\HARDWARE\LCD -I..\HARDWARE\OV7670-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I E:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_HD -DSTM32F10X_HD -o ..\obj\ili93xx.o --omf_browse ..\obj\ili93xx.crf --depend ..\obj\ili93xx.d)
+I (..\HARDWARE\LCD\lcd.h)(0x577CED21)
+I (..\SYSTEM\sys\sys.h)(0x52C02CEC)
+I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
+I (..\SYSTEM\sys\core_cm3.h)(0x54FFBE26)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
+I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
+I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
+I (..\HARDWARE\LCD\font.h)(0x52C52FE7)
+I (..\SYSTEM\usart\usart.h)(0x5323CAD8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
+I (..\SYSTEM\delay\delay.h)(0x50BF2544)

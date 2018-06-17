@@ -1,0 +1,17 @@
+..\obj\ov7620.o: ..\HARDWARE\OV7620\ov7620.c
+..\obj\ov7620.o: ..\HARDWARE\OV7620\ov7620.h
+..\obj\ov7620.o: ..\SYSTEM\sys\sys.h
+..\obj\ov7620.o: ..\SYSTEM\sys\stm32f10x.h
+..\obj\ov7620.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+..\obj\ov7620.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\ov7620.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+..\obj\ov7620.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+..\obj\ov7620.o: ..\SYSTEM\sys\system_stm32f10x.h
+..\obj\ov7620.o: ..\SYSTEM\usart\usart.h
+..\obj\ov7620.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\ov7620.o: ..\SYSTEM\delay\delay.h
+..\obj\ov7620.o: ..\HARDWARE\LED\led.h
+..\obj\ov7620.o: ..\HARDWARE\LCD\lcd.h
+..\obj\ov7620.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\obj\ov7620.o: ..\HARDWARE\EXTI\exti.h
+..\obj\ov7620.o: ..\HARDWARE\SCCB\sccb.h

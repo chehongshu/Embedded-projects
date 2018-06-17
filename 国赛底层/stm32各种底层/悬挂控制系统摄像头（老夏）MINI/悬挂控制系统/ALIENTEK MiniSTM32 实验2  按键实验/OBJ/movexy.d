@@ -1,0 +1,11 @@
+..\obj\movexy.o: ..\HARDWARE\MOVEXY\movexy.c
+..\obj\movexy.o: ..\HARDWARE\STEPER\steper.h
+..\obj\movexy.o: ..\SYSTEM\sys\sys.h
+..\obj\movexy.o: ..\SYSTEM\sys\stm32f10x.h
+..\obj\movexy.o: ..\SYSTEM\sys\core_cm3.h
+..\obj\movexy.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\movexy.o: ..\SYSTEM\sys\system_stm32f10x.h
+..\obj\movexy.o: ..\HARDWARE\MOVEXY\movexy.h
+..\obj\movexy.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\movexy.o: ..\SYSTEM\usart\usart.h
+..\obj\movexy.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
