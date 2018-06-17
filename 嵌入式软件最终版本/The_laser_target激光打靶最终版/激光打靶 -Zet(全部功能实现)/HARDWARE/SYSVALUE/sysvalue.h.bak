@@ -1,0 +1,29 @@
+# ifndef __SYS_VALUE_
+# define __SYS_VALUE_
+
+/******************************
+*定义系统状态变量
+*****************************/
+# define SYS_MENU 1           //菜单界面
+# define SYS_ADJUST_POINT  2 //校准中心点，边缘点
+# define SYS_BASE3         3 //基础题3状态
+# define SYS_IMPROVE1      4 //提高题1状态
+# define SYS_IMPROVE2      5 //提高题2状态
+# define SYS_IMPROVE3      6 //提高题3状态
+
+/************************************
+*串口收到的数据定义
+************************************/
+# define REC_ADJUST  1 //菜单下的开始键按下
+# define REC_BASE3   2 //菜单界面的压小键按下
+# define REC_IMP3    3 //菜单界面下的压大键按下
+# define REC_IMP1    4 //菜单界面的下注按键按下
+# define REC_IMP2    5 //菜单界面下的摇一摇按下
+# define REC_MENU    6 //所有界面的返回菜单界面按下
+# define REC_ADJUST1 7 //中心坐标校准按键按下
+# define REC_ADJUST2 8 //边缘坐标校准按键按下
+# define REC_RECDATA 9 //基础题3获取数据按键按下
+# define REC_SHOW    10//提高题1显示按键按下
+
+# endif
+

@@ -1,0 +1,17 @@
+..\obj\movemotor.o: ..\HARDWARE\MOVEMOTOR\moveMotor.c
+..\obj\movemotor.o: ..\HARDWARE\MOVEMOTOR\moveMotor.h
+..\obj\movemotor.o: ..\SYSTEM\sys\sys.h
+..\obj\movemotor.o: ..\USER\stm32f10x.h
+..\obj\movemotor.o: ..\CORE\core_cm3.h
+..\obj\movemotor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\movemotor.o: ..\USER\system_stm32f10x.h
+..\obj\movemotor.o: ..\USER\stm32f10x_conf.h
+..\obj\movemotor.o: ..\STM32F10x_FWLib\inc\stm32f10x_exti.h
+..\obj\movemotor.o: ..\USER\stm32f10x.h
+..\obj\movemotor.o: ..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h
+..\obj\movemotor.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\movemotor.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\movemotor.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
+..\obj\movemotor.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\movemotor.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\movemotor.o: ..\SYSTEM\delay\delay.h
