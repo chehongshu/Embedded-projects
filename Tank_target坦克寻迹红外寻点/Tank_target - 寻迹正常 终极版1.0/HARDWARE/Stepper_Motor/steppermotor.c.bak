@@ -1,0 +1,71 @@
+#include "steppermotor.h"
+#include "sys.h"
+
+//long double qcsl;//左面圈数
+//long double qcsr;//右面圈数
+
+void steppermotor_init()         //  步进电机    前后方向 和  开关  两个io
+{
+       GPIO_InitTypeDef  GPIO_InitStructure;
+        
+       RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);	 //使能PC
+        
+       GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;				
+       GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 		 //推挽输出
+       GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;		 //IO口速度为50MHz
+       GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
+	 GPIO_Init(GPIOA, &GPIO_InitStructure);
+    
+     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+     GPIO_Init(GPIOA, &GPIO_InitStructure);
+    
+     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_7;
+     GPIO_Init(GPIOA, &GPIO_InitStructure);
+}
+void stop_motor()
+{    
+   ENA_Left_L   ;
+   ENA_Right_L  ;  
+}
+
+void start_motor()
+{
+   ENA_Left_H   ;
+   ENA_Right_H  ;
+    
+    
+   DIR_Left_H   ;
+   DIR_Right_H  ;
+
+}
+
+void   turn_left()
+{
+
+}
+
+void  turn_rught()
+{
+    
+}
+    
+
+//void jinbur(int speed1r)
+//{  
+//  TA1CTL|=TASSEL_2+MC_1; //   smclk    
+//  TA1CCR0=speed1r;  //设置周期周期是16000000/speed   最好在1k和3k之间              
+//  //CCTL1=OUTMOD_7;
+//  //CCR1=speed1;//设置占空比的 占空比是speed2/speed1
+//  TA1CCTL0 |= CCIE; 
+//}
+//--------定时器中断函数------------
+//#pragma vector=TIMER1_A0_VECTOR
+//__interrupt void Timer_A1(void)
+//{
+//  //TACCTL0&=~ CCIE; //关中断
+//  static int dd=0;
+//  if(dd<=qcsr)  //1s=1000ms=20*50 定时    qcsr是控制右边有效的中断次数
+//  P1OUT^=CLKR; //P1.6 LED取反  
+//}
