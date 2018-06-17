@@ -1,0 +1,186 @@
+#include "led.h"
+#include "delay.h"
+#include "key.h"
+#include "sys.h"
+#include "lcd.h"
+#include "usart.h"
+#include "exti.h"
+#include "mpu6050.h"
+#include "inv_mpu.h"
+#include "inv_mpu_dmp_motion_driver.h" 
+#include "timer.h"
+#include "PID.h"
+extern int speed;
+extern float t_angle;
+extern int distance;
+extern int page;
+extern int arrow;	
+extern    u8 t; 
+extern    u8  key;
+extern   u8 lcd_id[12];			//存放LCD ID字符串
+extern	float pitch,roll,yaw; 		//欧拉角
+extern short aacx,aacy,aacz;		//加速度传感器原始数据
+extern	short gyrox,gyroy,gyroz;     //陀螺仪原始数据 
+ extern  short temp;    //温度
+    
+     
+   
+ extern     int i;
+void xianshi()
+{
+   if(mpu_dmp_get_data(&pitch,&roll,&yaw)==0)     //算出 xyz方向上的 三个参数	
+        {                                          
+            MPU_Get_Accelerometer(&aacx,&aacy,&aacz);	//得到加速度传感器数据
+            MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);  //得到陀螺仪数据  
+		
+				}
+		
+		if ((page==1)&&(arrow==1))
+		{
+		temp=-roll*10;//为了显示小数部分
+		POINT_COLOR=RED;	  
+		LCD_ShowString(10,40,210,24,24,"->"); 
+			LCD_ShowString(40,40,200,24,24,"fan speed:");
+		LCD_ShowxNum(220,40,speed,2,24,0);
+			LCD_ShowString(40,300,200,24,24,"current angle:");
+			
+				if(temp<0)
+				{
+					LCD_ShowChar(40+168,300,'-',24,0);		//显示负号
+					temp=-temp;		//转为正数
+				}else LCD_ShowChar(40+168,300,' ',24,0);		//去掉负号 
+				LCD_ShowNum(40+168+12,300,temp/10,3,24);		//显示整数部分	     //显示roll
+				LCD_ShowChar(40+168+48,300,'.',24,0);		//显示负号
+				LCD_ShowNum(40+168+60,300,temp%10,1,24);		//显示小数部分
+				LCD_ShowChar(40+168+72,300,'C',24,0);		//显示负号
+	
+				LCD_ShowString(40,100,200,24,24,"target angle:");
+		LCD_ShowxNum(220,100,t_angle,2,24,0);
+				LCD_ShowString(40,130,200,24,24,"distance:");
+		LCD_ShowxNum(220,130,distance,2,24,0);
+		}
+		
+
+		
+		
+				if ((page==1)&&(arrow==2))
+		{
+	temp=-roll*10;//为了显示小数部分
+			POINT_COLOR=RED;	  
+		LCD_ShowString(10,100,210,24,24,"->"); 
+			LCD_ShowString(40,40,200,24,24,"fan speed:");
+		LCD_ShowxNum(220,40,speed,2,24,0);
+			LCD_ShowString(40,300,200,24,24,"current angle:");
+			
+				if(temp<0)
+				{
+					LCD_ShowChar(40+168,300,'-',24,0);		//显示负号
+					temp=-temp;		//转为正数
+				}else LCD_ShowChar(40+168,300,' ',24,0);		//去掉负号 
+				LCD_ShowNum(40+168+12,300,temp/10,3,24);		//显示整数部分	     //显示roll
+				LCD_ShowChar(40+168+48,300,'.',24,0);		//显示负号
+				LCD_ShowNum(40+168+60,300,temp%10,1,24);		//显示小数部分
+				LCD_ShowChar(40+168+72,300,'C',24,0);		//显示负号
+				LCD_ShowString(40,100,200,24,24,"target angle:");
+		LCD_ShowxNum(220,100,t_angle,2,24,0);
+				LCD_ShowString(40,130,200,24,24,"distance:");
+		LCD_ShowxNum(220,130,distance,2,24,0);
+		}
+		
+				if ((page==1)&&(arrow==3))
+		{
+		
+temp=-roll*10;//为了显示小数部分
+			POINT_COLOR=RED;	  
+		LCD_ShowString(10,130,210,24,24,"->"); 
+			LCD_ShowString(40,40,200,24,24,"fan speed:");
+		LCD_ShowxNum(220,40,speed,2,24,0);
+						LCD_ShowString(40,300,200,24,24,"current angle:");
+			
+				if(temp<0)
+				{
+					LCD_ShowChar(40+168,300,'-',24,0);		//显示负号
+					temp=-temp;		//转为正数
+				}else LCD_ShowChar(40+168,300,' ',24,0);		//去掉负号 
+				LCD_ShowNum(40+168+12,300,temp/10,3,24);		//显示整数部分	     //显示roll
+				LCD_ShowChar(40+168+48,300,'.',24,0);		//显示负号
+				LCD_ShowNum(40+168+60,300,temp%10,1,24);		//显示小数部分
+				LCD_ShowChar(40+168+72,300,'C',24,0);		//显示负号
+				LCD_ShowString(40,100,200,24,24,"target angle:");
+		LCD_ShowxNum(220,100,t_angle,2,24,0);
+				LCD_ShowString(40,130,200,24,24,"distance:");
+		LCD_ShowxNum(220,130,distance,2,24,0);
+		}
+		
+				if (page==2)
+		{
+	temp=-roll*10;//为了显示小数部分
+			POINT_COLOR=RED;	  
+		LCD_ShowString(260,40,210,24,24,"<-"); 
+			LCD_ShowString(40,40,200,24,24,"fan speed:");
+		LCD_ShowxNum(220,40,speed,2,24,0);
+						LCD_ShowString(40,300,200,24,24,"current angle:");
+			
+				if(temp<0)
+				{
+					LCD_ShowChar(40+168,300,'-',24,0);		//显示负号
+					temp=-temp;		//转为正数
+				}else LCD_ShowChar(40+168,300,' ',24,0);		//去掉负号 
+				LCD_ShowNum(40+168+12,300,temp/10,3,24);		//显示整数部分	     //显示roll
+				LCD_ShowChar(40+168+48,300,'.',24,0);		//显示负号
+				LCD_ShowNum(40+168+60,300,temp%10,1,24);		//显示小数部分
+				LCD_ShowChar(40+168+72,300,'C',24,0);		//显示负号
+				LCD_ShowString(40,100,200,24,24,"target angle:");
+		LCD_ShowxNum(220,100,t_angle,2,24,0);
+				LCD_ShowString(40,130,200,24,24,"distance:");
+		LCD_ShowxNum(220,130,distance,2,24,0);
+		}
+		
+						if (page==3)
+		{
+temp=-roll*10;//为了显示小数部分
+			POINT_COLOR=RED;	  
+		LCD_ShowString(260,100,210,24,24,"<-"); 
+			LCD_ShowString(40,40,200,24,24,"fan speed:");
+		LCD_ShowxNum(220,40,speed,2,24,0);
+						LCD_ShowString(40,300,200,24,24,"current angle:");
+			
+				if(temp<0)
+				{
+					LCD_ShowChar(40+168,300,'-',24,0);		//显示负号
+					temp=-temp;		//转为正数
+				}else LCD_ShowChar(40+168,300,' ',24,0);		//去掉负号 
+				LCD_ShowNum(40+168+12,300,temp/10,3,24);		//显示整数部分	     //显示roll
+				LCD_ShowChar(40+168+48,300,'.',24,0);		//显示负号
+				LCD_ShowNum(40+168+60,300,temp%10,1,24);		//显示小数部分
+				LCD_ShowChar(40+168+72,300,'C',24,0);		//显示负号
+				LCD_ShowString(40,100,200,24,24,"target angle:");
+		LCD_ShowxNum(220,100,t_angle,2,24,0);
+				LCD_ShowString(40,130,200,24,24,"distance:");
+		LCD_ShowxNum(220,130,distance,2,24,0);
+		}
+		
+						if (page==4)
+		{
+           temp=-roll*10;//为了显示小数部分
+			POINT_COLOR=RED;	  
+		LCD_ShowString(260,130,210,24,24,"<-"); 
+			LCD_ShowString(40,40,200,24,24,"fan speed:");
+		LCD_ShowxNum(220,40,speed,2,24,0);
+						LCD_ShowString(40,300,200,24,24,"current angle:");
+			
+				if(temp<0)
+				{
+					LCD_ShowChar(40+168,300,'-',24,0);		//显示负号
+					temp=-temp;		//转为正数
+				}else LCD_ShowChar(40+168,300,' ',24,0);		//去掉负号 
+				LCD_ShowNum(40+168+12,300,temp/10,3,24);		//显示整数部分	     //显示roll
+				LCD_ShowChar(40+168+48,300,'.',24,0);		//显示负号
+				LCD_ShowNum(40+168+60,300,temp%10,1,24);		//显示小数部分
+				LCD_ShowChar(40+168+72,300,'C',24,0);		//显示负号
+				LCD_ShowString(40,100,200,24,24,"target angle:");
+		LCD_ShowxNum(220,100,t_angle,2,24,0);
+				LCD_ShowString(40,130,200,24,24,"distance:");
+		LCD_ShowxNum(220,130,distance,2,24,0);
+            }
+}
