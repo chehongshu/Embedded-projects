@@ -1,0 +1,34 @@
+#include "PID.h"
+
+ PID sPID; 
+ PID *sptr = &sPID; 
+
+//pid初始化
+void IncPID_Init(void) 
+{ 
+	sptr->SumError = 0; 
+	sptr->LastError = 0;    
+	sptr->PrevError = 0;    
+	sptr->Proportion=8.2 ; 
+	sptr->Integral =0.9;
+	sptr->Derivative =0.75;
+
+
+}
+ static double d_Error,dd_Error;
+  double Error;
+
+//pid算法实现
+double IncPID_Calc(double SetPoint, double NextPoint)                                                       
+{ 
+    double iError, iIncpid;
+	Error = SetPoint - NextPoint;             
+	d_Error   =  Error - sptr->LastError;              
+	dd_Error  =  d_Error - sptr->PrevError;	       
+	sptr->LastError =  Error; 				        
+	sptr->PrevError =  d_Error; 			  
+	iIncpid = sptr->Proportion * d_Error + sptr->Integral*Error + sptr->Derivative*dd_Error;
+	
+	return(iIncpid); 														
+}
+

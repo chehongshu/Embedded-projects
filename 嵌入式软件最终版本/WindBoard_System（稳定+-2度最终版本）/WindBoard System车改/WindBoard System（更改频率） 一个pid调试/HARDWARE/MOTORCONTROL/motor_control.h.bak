@@ -1,0 +1,10 @@
+# ifndef __MOTOR_CONTROL_
+# define __MOTOR_CONTROL_
+# include "sys.h"
+# include "pid.h"
+
+//基础题目1模式
+void base1Mode(void);
+
+# endif
+

@@ -1,0 +1,10 @@
+# ifndef __SCREEN_H
+# define __SCREEN_H
+
+//显示菜单界面
+void showMenu(u8 selectNum);
+
+# endif
+
+
+
